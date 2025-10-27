@@ -108,13 +108,13 @@ The dataset was split 80 % train / 10 % val / 10 % test.
 <p align="center">
   <img src="images/training_loss.png" alt="Training loss" width="600">
   <br>
-  <em>Figure 3: Training loss.</em>
+  <em>Figure 2: Training loss.</em>
 </p>
 
 <p align="center">
   <img src="images/training_accuracy.png" alt="Training accuracy" width="600">
   <br>
-  <em>Figure 2: Training accuracy.</em>
+  <em>Figure 3: Training accuracy.</em>
 </p>
 
 
