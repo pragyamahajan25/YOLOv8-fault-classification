@@ -2,7 +2,7 @@
 
 This project investigates how **image faults (blur)** affect **object detection confidence** in YOLOv8 and develops a **deep learning model** to classify **fault intensity**.
 
-It was completed as part of the *Studienarbeit* at the **University of Siegen (Chair of Zuverlässigkeit Technischer Systeme & Elektrische Messtechnik)**.
+It was completed as part of the *Studienarbeit* at the **University of Siegen (Chair of Reliability of Technical Systems & Electrical Measurement)**.
 
 ---
 
@@ -16,21 +16,36 @@ This project focuses on **blur faults** to study:
 
 ---
 
+## 🧾 Dataset
+
+**Dataset:** [Cat Dataset (Kaggle)](https://www.kaggle.com/datasets/ma7555/cat-dataset) 🐈  
+- Total images: **9,993**  
+- Each image was replicated across 4 blur categories (`no_fault`, `blur_low`, `blur_medium`, `blur_extreme`)  
+- Total after fault injection: **≈ 39,972 images**
+
+This dataset was selected for its visual diversity, which helped evaluate YOLO’s confidence stability across varied lighting and composition.
+
+<p align="center">
+  <img src="images/blur_levels.png" alt="Blur Fault Examples" width="600">
+  <br>
+  <em>Figure 1: Examples of no-fault and blur-injected images used in this study.</em>
+</p>
+
+---
+
 ## ⚙️ Phase 1 — YOLOv8 Fault Analysis
 
 Phase 1 analyzes YOLOv8’s behavior on **fault-injected images** to reveal confidence degradation and model sensitivity.
 
 ### 🧰 Fault Injection Process
 To simulate realistic sensor faults, a **Python-based Fault-Injection Tool** was used:  
-➡️ **GitHub:** [thomas-de-fosse/faults-injecting-tool](https://github.com/thomas-de-fosse/faults-injecting-tool)
+➡️ **GitHub:** (https://github.com/omarazeez90/Faults-injecting-tool)
 
 - The tool applies **Gaussian blur** with different kernel sizes to generate three blur intensities:
   - `blur_low`
   - `blur_medium`
   - `blur_extreme`
 - Each clean image was duplicated across these categories plus the original (`no_fault`), producing **39,972 images** in total.
-
-Example (from the report):
 
 | Fault Level | Example |
 |--------------|----------|
@@ -154,10 +169,3 @@ python train.py
 python test.py
 ```
 
---
-
-
----
-
-This version follows your report closely, cites both the **fault injection GitHub** and **Kaggle dataset**, and presents **Phase 1** with full clarity and reproducibility.
-```
