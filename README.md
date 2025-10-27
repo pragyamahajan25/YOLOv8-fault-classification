@@ -26,7 +26,7 @@ This project focuses on **blur faults** to study:
 This dataset was selected for its visual diversity, which helped evaluate YOLO’s confidence stability across varied lighting and composition.
 
 <p align="center">
-  <img src=".github/images/blur_levels.png" alt="Blur Fault Examples" width="600">
+  <img src="images/blur_levels.png" alt="Blur Fault Examples" width="600">
   <br>
   <em>Figure 1: Examples of no-fault and blur-injected images used in this study.</em>
 </p>
@@ -106,13 +106,13 @@ Training was executed on the **Omni GPU Cluster** (University of Siegen).
 The dataset was split 80 % train / 10 % val / 10 % test.
 
 <p align="center">
-  <img src=".github/images/training_loss.png" alt="Training loss" width="600">
+  <img src="images/training_loss.png" alt="Training loss" width="600">
   <br>
   <em>Figure 3: Training loss.</em>
 </p>
 
 <p align="center">
-  <img src=".github/images/training_accuracy.png" alt="Training accuracy" width="600">
+  <img src="images/training_accuracy.png" alt="Training accuracy" width="600">
   <br>
   <em>Figure 2: Training accuracy.</em>
 </p>
