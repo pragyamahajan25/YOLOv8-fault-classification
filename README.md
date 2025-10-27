@@ -18,7 +18,7 @@ This project focuses on **blur faults** to study:
 
 ## 🧾 Dataset
 
-**Dataset:** [Cat Dataset (Kaggle)](https://www.kaggle.com/datasets/ma7555/cat-dataset) 🐈  
+**Dataset:** [Cat Dataset (Kaggle)](https://www.kaggle.com/datasets/crawford/cat-dataset) 🐈  
 - Total images: **9,993**  
 - Each image was replicated across 4 blur categories (`no_fault`, `blur_low`, `blur_medium`, `blur_extreme`)  
 - Total after fault injection: **≈ 39,972 images**
@@ -46,13 +46,6 @@ To simulate realistic sensor faults, a **Python-based Fault-Injection Tool** was
   - `blur_medium`
   - `blur_extreme`
 - Each clean image was duplicated across these categories plus the original (`no_fault`), producing **39,972 images** in total.
-
-| Fault Level | Example |
-|--------------|----------|
-| No Fault | Clear image |
-| Low Blur | Slightly blurred edges |
-| Medium Blur | Visible distortion |
-| Extreme Blur | Loss of fine detail |
 
 ---
 
@@ -87,10 +80,6 @@ Images were grouped into **7 behavioral cases**, e.g.:
 
 These cases expose how lightweight YOLO models may over- or under-react to degraded visuals, affecting safety in real-world applications.
 
-<!-- Add a sample detection image below -->
-
-<!-- ![YOLOv8 Detection Example](images/yolo_detection.png) -->
-
 ---
 
 ## 🔍 Phase 2 — Fault Intensity Classification
@@ -116,21 +105,10 @@ model.fc = nn.Linear(model.fc.in_features, 4)
 Training was executed on the **Omni GPU Cluster** (University of Siegen).
 The dataset was split 80 % train / 10 % val / 10 % test.
 
-<!-- Add training plots below -->
+<!-- ![Training Loss](images/training_loss.png) -->
 
 <!-- ![Training Accuracy](images/training_accuracy.png) -->
 
-<!-- ![Confusion Matrix](images/confusion_matrix.png) -->
-
----
-
-## 🧾 Dataset
-
-Dataset used in this study:
-📦 **Kaggle – Cat Dataset (9,993 images)**
-➡️ [https://www.kaggle.com/datasets/ma7555/cat-dataset](https://www.kaggle.com/datasets/ma7555/cat-dataset)
-
-Each image was duplicated with injected blur levels → total **≈ 39 k images** across four classes.
 
 ---
 
@@ -140,8 +118,6 @@ Each image was duplicated with injected blur levels → total **≈ 39 k images*
 | ---------------------------------- | --------- | --------------------------------------------------- |
 | 1 – YOLOv8 Fault Analysis          | YOLOv8n   | 7 distinct confidence degradation patterns observed |
 | 2 – Fault Intensity Classification | ResNet-18 | ~90 % validation accuracy                           |
-
-<!-- ![Blur Levels Example](images/blur_levels.png) -->
 
 ---
 
