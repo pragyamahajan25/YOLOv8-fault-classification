@@ -105,9 +105,17 @@ model.fc = nn.Linear(model.fc.in_features, 4)
 Training was executed on the **Omni GPU Cluster** (University of Siegen).
 The dataset was split 80 % train / 10 % val / 10 % test.
 
-<!-- ![Training Loss](images/training_loss.png) -->
+<p align="center">
+  <img src="images/training_loss.png" alt="Training loss" width="600">
+  <br>
+  <em>Figure 2: Training loss.</em>
+</p>
 
-<!-- ![Training Accuracy](images/training_accuracy.png) -->
+<p align="center">
+  <img src="images/training_accuracy.png" alt="Training accuracy" width="600">
+  <br>
+  <em>Figure 2: Training accuracy.</em>
+</p>
 
 
 ---
